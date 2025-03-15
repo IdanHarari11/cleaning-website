@@ -20,10 +20,16 @@ const images = [
     description: 'Tailored cleaning services for homes, offices, and commercial spaces.',
   },
   {
-    src: '/images/cleaning-3.jpg',
-    alt: 'Eco-friendly cleaning products',
+    src: '/images/cleaning/medium-shot-woman-cleaning-window.jpg',
+    alt: 'medium shot woman cleaning window',
     title: 'Eco-Friendly Cleaning',
     description: 'We use environmentally safe products that are effective and sustainable.',
+  },
+  {
+    src: '/images/cleaning/close-up-woman-spray-cleaning-floor.jpg',
+    alt: 'close up woman spraying cleaning floor',
+    title: 'Customized Cleaning Solutions',
+    description: 'We tailor our cleaning services to meet your specific needs and preferences.',
   },
 ];
 
@@ -83,51 +89,62 @@ const SwitchImages = () => {
             alt={images[currentIndex].alt}
             fill
             priority
-            className="object-cover"
+            className="object-cover object-center h-full w-full"
+            sizes="100vw"
+            style={{
+              objectPosition: 'center center',
+              maxHeight: '100vh'
+            }}
           />
         </motion.div>
       </AnimatePresence>
 
       {/* Content */}
       <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              {images[currentIndex].title}
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-10">
-              {images[currentIndex].description}
-            </p>
-          </motion.div>
-        </AnimatePresence>
-
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('services')}
-            className="px-8 py-3 bg-white text-gray-900 rounded-full font-medium text-lg
-                     hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
-          >
-            Our Services
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('contact')}
-            className="px-8 py-3 bg-primary text-white rounded-full font-medium text-lg
-                     hover:bg-primary/90 transition-colors duration-200 cursor-pointer"
-          >
-            Contact Us
-          </motion.button>
+        <div className="flex-1"></div>
+        <div className="w-full">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                {images[currentIndex].title}
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90 mb-10">
+                {images[currentIndex].description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+          
+          <div className="h-32 md:h-24"></div> {/* Fixed height spacer */}
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => scrollToSection('services')}
+              className="px-8 py-3 bg-[#259CD5] text-white rounded-full font-medium text-lg
+                       hover:bg-primary/90 transition-colors duration-200 cursor-pointer"
+            >
+              Our Services
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => scrollToSection('contact')}
+              className="px-8 py-3 bg-primary text-white rounded-full font-medium text-lg
+                       hover:bg-primary/90 transition-colors duration-200 cursor-pointer"
+            >
+              Contact Us
+            </motion.button>
+          </div>
         </div>
+        <div className="flex-1"></div>
 
         {/* Indicators */}
         <div className="absolute bottom-10 flex space-x-3">
