@@ -147,26 +147,29 @@ const SwitchImages = () => {
           
           <div className="h-32 md:h-24"></div> {/* Fixed height spacer */}
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.3)" }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97, y: 1 }}
               onClick={() => scrollToSection('services')}
-              className="px-8 py-4 bg-[#259CD5] text-white rounded-full font-medium text-lg
-                       shadow-[5px_5px_15px_rgba(0,0,0,0.3),-2px_-2px_10px_rgba(255,255,255,0.1)] 
-                       hover:bg-[#1e8bc3] transition-all duration-300 cursor-pointer"
+              className="px-10 py-4 bg-gradient-to-r from-[#259CD5] to-[#1e8bc3] text-white rounded-full font-medium text-sm uppercase tracking-wider
+                       shadow-[5px_5px_15px_rgba(0,0,0,0.3),inset_1px_1px_1px_rgba(255,255,255,0.3)] 
+                       hover:shadow-[8px_8px_20px_rgba(0,0,0,0.4),inset_2px_2px_3px_rgba(255,255,255,0.4)] 
+                       transition-all duration-300 cursor-pointer relative overflow-hidden group"
             >
-              Our Services
+              <span className="relative z-10">Our Services</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#1e8bc3] to-[#259CD5] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.3)" }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97, y: 1 }}
               onClick={() => scrollToSection('contact')}
-              className="px-8 py-4 bg-white text-[#259CD5] rounded-full font-medium text-lg
-                       shadow-[5px_5px_15px_rgba(0,0,0,0.3),-2px_-2px_10px_rgba(255,255,255,0.1)] 
-                       hover:bg-gray-100 transition-all duration-300 cursor-pointer"
+              className="px-10 py-4 bg-white text-[#259CD5] rounded-full font-medium text-sm uppercase tracking-wider
+                       shadow-[5px_5px_15px_rgba(0,0,0,0.3),inset_1px_1px_1px_rgba(255,255,255,0.5)] 
+                       hover:shadow-[8px_8px_20px_rgba(0,0,0,0.4),inset_2px_2px_3px_rgba(255,255,255,0.6)]
+                       hover:bg-gray-50 transition-all duration-300 cursor-pointer relative overflow-hidden"
             >
-              Contact Us
+              <span className="bg-gradient-to-r from-[#259CD5] to-[#1e8bc3] bg-clip-text text-transparent">Contact Us</span>
             </motion.button>
           </div>
         </div>
@@ -178,6 +181,24 @@ const SwitchImages = () => {
         <div className="max-w-6xl mx-auto px-4">
           <Achievements />
         </div>
+      </div>
+
+      {/* Indicators */}
+      <div className="absolute bottom-10 flex space-x-5">
+        {images.map((_, index) => (
+          <motion.button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 cursor-pointer 
+              ${index === currentIndex 
+                ? 'bg-gradient-to-r from-[#259CD5] to-[#1e8bc3] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),2px_2px_4px_rgba(0,0,0,0.3)] scale-110' 
+                : 'bg-white/70 hover:bg-white/90 shadow-[1px_1px_3px_rgba(0,0,0,0.3),inset_1px_1px_1px_rgba(255,255,255,0.4)]'
+              }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

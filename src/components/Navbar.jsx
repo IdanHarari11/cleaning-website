@@ -51,23 +51,24 @@ const Navbar = () => {
                 src="/images/logo.png" 
                 alt="KBI Cleaning Logo" 
                 priority 
-                width={110} 
-                height={50} 
+                width={90} 
+                height={30} 
               />
             </button>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.sectionId, setIsMenuOpen(false))}
-                className={`font-bold transition-colors duration-200 cursor-pointer ${
-                  scrolled ? 'text-[#259CD5] hover:opacity-80' : 'text-[#259CD5] hover:opacity-80'
+                className={`font-medium tracking-wide text-sm uppercase transition-all duration-300 cursor-pointer relative group ${
+                  scrolled ? 'text-[#259CD5]' : 'text-[#259CD5]'
                 }`}
               >
-                {item.name}
+                <span className="relative z-10">{item.name}</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#259CD5] group-hover:w-full transition-all duration-300 ease-in-out"></span>
               </button>
             ))}
           </div>
@@ -118,7 +119,7 @@ const Navbar = () => {
                     hidden: { opacity: 0, y: -20 },
                     visible: { opacity: 1, y: 0 }
                   }}
-                  className="block py-3 text-[#259CD5] hover:opacity-80 transition-colors duration-200 font-bold w-full text-left cursor-pointer"
+                  className="block py-3 text-[#259CD5] hover:text-[#1e8bc3] transition-all duration-300 font-medium tracking-wide text-sm uppercase w-full text-left cursor-pointer"
                 >
                   {item.name}
                 </motion.button>

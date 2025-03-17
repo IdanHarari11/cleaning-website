@@ -95,7 +95,7 @@ const Feedbacks = () => {
         color: i % 5 === 0 ? 'bg-blue-200' : i % 4 === 0 ? 'bg-blue-100' : i % 3 === 0 ? 'bg-cyan-100' : 'bg-sky-100'
     }));
 
-    return (
+  return (
         <section id="testimonials" className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden scroll-mt-20">
             {/* Decorative bubbles */}
             {bubbles.map((bubble) => (
