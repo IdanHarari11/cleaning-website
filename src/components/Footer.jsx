@@ -19,8 +19,8 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', sectionId: 'home' },
     { name: 'Services', sectionId: 'services' },
-    { name: 'How It Works', sectionId: 'workflow' },
-    { name: 'Our Team', sectionId: 'our-team' },
+    { name: 'About Us', sectionId: 'about-us' },
+    { name: 'Testimonials', sectionId: 'testimonials' },
     { name: 'Contact', sectionId: 'contact' },
   ];
 
@@ -51,7 +51,7 @@ const Footer = () => {
               Professional cleaning services for residential and commercial properties. 
               We provide high-quality, reliable cleaning solutions tailored to your needs.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.label}
@@ -66,7 +66,7 @@ const Footer = () => {
                   <social.icon className="w-6 h-6" />
                 </motion.a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}

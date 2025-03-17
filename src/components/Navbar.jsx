@@ -9,7 +9,8 @@ import useScrollToSection from '@/hooks/useScrollToSection';
 const navItems = [
   { name: 'Home', sectionId: 'home' },
   { name: 'Services', sectionId: 'services' },
-  { name: 'How It Works', sectionId: 'workflow' },
+  { name: 'About Us', sectionId: 'about-us' },
+  { name: 'Testimonials', sectionId: 'testimonials' },
   { name: 'Our Team', sectionId: 'our-team' },
   { name: 'Contact', sectionId: 'contact' },
 ];
