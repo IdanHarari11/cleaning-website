@@ -172,23 +172,6 @@ const SwitchImages = () => {
         </div>
         <div className="flex-1"></div>
 
-        {/* Indicators */}
-        <div className="absolute bottom-10 flex space-x-4">
-          {images.map((_, index) => (
-            <motion.button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              className={`w-4 h-4 rounded-full transition-all duration-300 cursor-pointer shadow-[2px_2px_5px_rgba(0,0,0,0.3),-1px_-1px_3px_rgba(255,255,255,0.1)] ${
-                index === currentIndex 
-                  ? 'bg-[#259CD5] scale-110' 
-                  : 'bg-white/50 hover:bg-white/70'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
       </div>
 
       <div className="w-full py-6">
