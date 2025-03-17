@@ -10,6 +10,8 @@ const achievements = [
     label: 'Average Rating',
     suffix: '/5',
     color: 'from-yellow-500 to-amber-600',
+    iconColor: 'text-yellow-500',
+    bgColor: 'bg-yellow-50',
     showOnMobile: true
   },
   {
@@ -18,6 +20,8 @@ const achievements = [
     label: 'DOMESTIC WORKERS',
     suffix: '+',
     color: 'from-blue-500 to-cyan-600',
+    iconColor: 'text-blue-500',
+    bgColor: 'bg-blue-50',
     showOnMobile: true
   },
   {
@@ -26,6 +30,8 @@ const achievements = [
     label: 'Happy Guests',
     suffix: '+',
     color: 'from-green-500 to-emerald-600',
+    iconColor: 'text-green-500',
+    bgColor: 'bg-green-50',
     showOnMobile: true
   },
   {
@@ -34,6 +40,8 @@ const achievements = [
     label: 'Host Satisfaction',
     suffix: '%',
     color: 'from-purple-500 to-indigo-600',
+    iconColor: 'text-purple-500',
+    bgColor: 'bg-purple-50',
     showOnMobile: false
   },
   {
@@ -42,13 +50,15 @@ const achievements = [
     label: 'Years Experience',
     suffix: '+',
     color: 'from-red-500 to-rose-600',
+    iconColor: 'text-red-500',
+    bgColor: 'bg-red-50',
     showOnMobile: false
   }
 ];
 
 const Achievements = () => {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-1.5 md:gap-3 lg:gap-4 px-1 md:px-0">
+    <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 lg:gap-6 px-1 md:px-0">
       {achievements.map((achievement, index) => (
         <motion.div
           key={achievement.label}
@@ -57,49 +67,50 @@ const Achievements = () => {
           transition={{ duration: 0.5, delay: index * 0.1 }}
           whileHover={{ 
             scale: 1.05,
-            transition: { duration: 0.2 }
+            boxShadow: "8px 8px 16px rgba(0,0,0,0.2), -8px -8px 16px rgba(255,255,255,0.1)",
+            transition: { duration: 0.3 }
           }}
-          className={`group relative overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl
+          className={`group relative overflow-hidden bg-white/90 backdrop-blur-sm rounded-xl
+                     shadow-[5px_5px_15px_rgba(0,0,0,0.1),-2px_-2px_10px_rgba(255,255,255,0.1)]
+                     transition-all duration-300
                      ${!achievement.showOnMobile ? 'hidden lg:block' : ''}`}
         >
-          <div className="flex flex-col items-center text-center p-1.5 md:p-2 relative z-10">
-            {/* Glowing background effect */}
-            <div className={`absolute inset-0 opacity-20 bg-gradient-to-br ${achievement.color}
-                           group-hover:opacity-30 transition-opacity duration-300`} />
+          <div className="flex flex-col items-center text-center p-3 md:p-4 relative z-10">
+            {/* Subtle gradient background */}
+            <div className={`absolute inset-0 opacity-10 bg-gradient-to-br ${achievement.color}
+                           group-hover:opacity-20 transition-opacity duration-300`} />
             
-            {/* Animated icon container */}
-            <div className="relative">
+            {/* Neumorphic icon container */}
+            <div className="relative mb-2 md:mb-3">
               <motion.div
-                className={`w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br ${achievement.color} 
-                           flex items-center justify-center mb-1 md:mb-2
-                           group-hover:shadow-lg group-hover:shadow-white/20 transition-shadow duration-300`}
+                className={`w-10 h-10 md:w-12 md:h-12 rounded-full ${achievement.bgColor} 
+                           flex items-center justify-center
+                           shadow-[inset_2px_2px_5px_rgba(0,0,0,0.05),inset_-2px_-2px_5px_rgba(255,255,255,0.5)]
+                           group-hover:shadow-[inset_3px_3px_6px_rgba(0,0,0,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]
+                           transition-all duration-300`}
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
               >
-                <achievement.icon className="w-3 h-3 md:w-4 md:h-4 text-white" />
+                <achievement.icon className={`w-5 h-5 md:w-6 md:h-6 ${achievement.iconColor}`} />
               </motion.div>
-              
-              {/* Pulsing ring effect - hidden on mobile */}
-              <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${achievement.color}
-                             opacity-0 group-hover:opacity-20 animate-ping hidden md:block`} />
             </div>
 
             {/* Value with animated counting effect */}
             <motion.div
-              className="text-sm md:text-xl font-bold text-white relative text-shadow-sm"
+              className="text-lg md:text-2xl font-bold text-gray-800 relative"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
             >
               <span className="relative z-10 whitespace-nowrap">
                 {achievement.value}
-                <span className="text-white/80">{achievement.suffix}</span>
+                <span className="text-gray-600">{achievement.suffix}</span>
               </span>
             </motion.div>
 
             {/* Label with gradient text effect */}
-            <div className={`text-[10px] md:text-xs font-medium bg-gradient-to-r ${achievement.color}
-                           bg-clip-text text-transparent mt-0.5 md:mt-1 leading-tight text-shadow-sm`}>
+            <div className={`text-xs md:text-sm font-medium bg-gradient-to-r ${achievement.color}
+                           bg-clip-text text-transparent mt-1 md:mt-2 leading-tight`}>
               {achievement.label}
             </div>
           </div>
