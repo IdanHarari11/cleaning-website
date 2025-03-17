@@ -265,20 +265,6 @@ const AboutUs = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Call to action button */}
-            <motion.div
-              variants={itemVariants}
-              className="mt-10 flex justify-center sm:justify-start"
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-[5px_5px_15px_rgba(0,0,0,0.1)] hover:shadow-[5px_5px_20px_rgba(0,0,0,0.2)] transition-all duration-300"
-              >
-                Get Started Today
-              </motion.button>
-            </motion.div>
           </motion.div>
         </div>
       </div>
