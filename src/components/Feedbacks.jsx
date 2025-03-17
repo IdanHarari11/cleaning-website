@@ -21,22 +21,22 @@ const Feedbacks = () => {
         {
             id: 1,
             name: 'Viki Hatanian',
-            feedback: `Yani has been not only great to work with, but she really has made me feel comfortable during the process. Yani listened to my needs as a client and made sure to match someone that makes sense for me as well as with the dynamic of my home. Yani stays in touch and makes sure that everything is working out as it should and smoothes out any bumps if there is any. I can tell that Yani puts a lot of thought and effort into both the employee and the clients to ensure everyone is happy. I feel confident in her services and I'm very grateful to have such a quality agency available.`,
+            feedback: `Yani has been not only great to work with, but she really has made me feel comfortable during the process. Yani listened to my cleaning needs and made sure to provide a service that makes sense for me and my home. Yani stays in touch and makes sure that everything is working out as it should and smoothes out any bumps if there is any. I can tell that Yani puts a lot of thought and effort into both the cleaning team and the clients to ensure everyone is happy. I feel confident in her services and I'm very grateful to have such a quality cleaning service available.`,
         },
         {
             id: 2,
             name: `Sarit Levtov`,
-            feedback: `Yani is not just an amazing person, she has amazing workers who will not disappoint. You cannot be sorry with working with her because she is so dedicated and devoted to ensuring that you get the best cleaning lady that you would require all your Basic household needs. Once you place that call you will not be disappointed! forever grateful.`
+            feedback: `Yani is not just an amazing person, she has amazing cleaning professionals who will not disappoint. You cannot be sorry with working with her because she is so dedicated and devoted to ensuring that you get the best cleaning service that meets all your basic home needs. Once you place that call you will not be disappointed! Forever grateful.`
         },
         {
             id: 3,
             name: `Rona Livingston`,
-            feedback: `I was looking for a full time nanny and house keeper for my 1 year old baby was referred to Yani through a friend. She found a few candidates for me, and was able to tell me a lot about them and scheduled an interview and then suggested to have each one to work a full day while I'm at home so i can get a clear observation of how they are with my daughter. That MADE the difference! It was so clear to me who is the best candidate and I'm so happy i found her! The nanny was perfect for my daughter and for me. We got along so well and i was able to go to work with a clear mind. I totally recommend this agency. Super professional and smart! She was very clear with what the nannies are looking to make and how everything works, as this was my first time seeking out one.`
+            feedback: `I was looking for a reliable cleaning service for my home and was referred to Yani through a friend. She explained her cleaning services in detail and scheduled a convenient time. What MADE the difference was the attention to detail! The cleaning was thorough and meticulous. I'm so happy I found this service! The cleaning team was professional and efficient. We got along so well and I was able to go to work with a clear mind. I totally recommend this cleaning service. Super professional and smart! She was very clear with what the services include and how everything works, as this was my first time seeking out professional cleaning.`
         },
         {
             id: 4,
             name: `Mandyf Davoudpour`,
-            feedback: `KBI is great to work with. Yanni finds me great cleaning ladies, fast and affordable.`
+            feedback: `KBI is great to work with. Yanni provides excellent cleaning services, fast and affordable.`
         }
     ];
 

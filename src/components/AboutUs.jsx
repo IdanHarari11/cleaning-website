@@ -237,7 +237,7 @@ const AboutUs = () => {
                 className="text-gray-700 mb-6 pt-8 px-8 text-lg md:text-xl leading-relaxed"
                 variants={itemVariants}
               >
-                There are many agencies in the industry, but we are <span className="font-semibold text-blue-600">different!</span> We care a lot about our clients and understand the importance of finding the right match for each household. With over a thousand domestic workers at our disposal, we interview and place according to our client's preferences. Our success rate is the highest in south Florida with hundreds of placements and five-star reviews.
+                There are many cleaning services in the industry, but we are <span className="font-semibold text-blue-600">different!</span> We care deeply about our clients and understand the importance of providing exceptional cleaning solutions tailored to each space. With our team of professional cleaners, we deliver meticulous service according to our client's preferences. Our success rate is the highest in South Florida with hundreds of satisfied customers and five-star reviews.
               </motion.p>
               
               <FaQuoteRight className="absolute bottom-6 right-6 text-blue-100 text-4xl" />
@@ -246,9 +246,9 @@ const AboutUs = () => {
             {/* Key points with enhanced neumorphic buttons */}
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { text: "Personalized Matching", icon: FaCheck },
-                { text: "Highest Success Rate", icon: FaStar },
-                { text: "Hundreds of Placements", icon: BsStars },
+                { text: "Customized Cleaning", icon: FaCheck },
+                { text: "Highest Quality Service", icon: FaStar },
+                { text: "Experienced Professionals", icon: BsStars },
                 { text: "Five-Star Reviews", icon: FaAward }
               ].map((point, index) => (
                 <motion.div

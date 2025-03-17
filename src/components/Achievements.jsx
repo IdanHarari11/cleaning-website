@@ -17,7 +17,7 @@ const achievements = [
   {
     icon: FaHome,
     value: '350',
-    label: 'DOMESTIC WORKERS',
+    label: 'CLEANING PROJECTS',
     suffix: '+',
     color: 'from-blue-500 to-cyan-600',
     iconColor: 'text-blue-500',
