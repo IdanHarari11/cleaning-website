@@ -25,7 +25,7 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: FaEnvelope, text: 'info@kbicleaning.com', href: 'mailto:info@kbicleaning.com' },
+    { icon: FaEnvelope, text: 'yani@kbistaffing.com', href: 'mailto:yani@kbistaffing.com' },
     { icon: FaPhone, text: '(305) 555-1234', href: 'tel:(305)5551234' },
     { icon: FaMapMarkerAlt, text: 'Miami-Dade & Broward County', href: null },
   ];
