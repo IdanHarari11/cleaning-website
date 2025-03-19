@@ -11,7 +11,7 @@ const contactInfo = [
   {
     icon: FaEnvelope,
     title: 'Email Us',
-    details: 'info@kbicleaning.com',
+    details: 'yani@kbistaffing.com',
     description: 'Quick response within 24 hours',
   },
   {
@@ -66,7 +66,7 @@ const ContactSection = () => {
         ${formData.message}`.trim();
 
       // Create the mailto URL
-      const mailtoLink = `mailto:info@kbicleaning.com?subject=${encodeURIComponent('New Cleaning Service Request')}&body=${encodeURIComponent(emailBody)}`;
+      const mailtoLink = `mailto:yani@kbistaffing.com?subject=${encodeURIComponent('New Cleaning Service Request')}&body=${encodeURIComponent(emailBody)}`;
 
       // Open email client
       window.open(mailtoLink, '_blank');
